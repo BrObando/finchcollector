@@ -19,9 +19,10 @@
           <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Finch Collector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">ABOUT</a></li>
+          <li><a href="{% url 'about' %}">ABOUT</a></li>
+          <li><a href="{% url 'finches_create' %}"> Add a Finch</a></li>
           <!-- new markup below -->
-         <li><a href="/finches">All THE FINCHES</a></li>
+         <li><a href="{% url 'index' %}">All THE FINCHES</a></li>
         </ul>
       </div>
     </nav>

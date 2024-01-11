@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.urls import reverse
+
 # Create your models here.
 class Finch(models.Model):
     name = models.CharField(max_length=100)
@@ -10,3 +12,7 @@ class Finch(models.Model):
      # new code below
     def __str__(self):
         return self.name
+
+     # Add this method
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'finch_id': self.id})
